@@ -1,17 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
-</head>
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <!-- ========= BOOTSTRAP ========= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- =====CSS===== -->
+    <link rel="stylesheet" href="css/styles.css" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>UpForCoffee</title>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <header class="l-header">
+      <nav class="nav bd-grid sticky">
+        <div>
+          <a href="#" class="nav__logo">UpForCoffee</a>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item" id="home-page">
+              <a href="#home" class="nav__link active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Features</a>
+            </li>
+            <li class="nav__item" id="contact-us">
+              <a href="#contact" class="nav__link join__us">Join Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!-- ===== HOME ===== -->
+      <section class="home" id="home">
+        <div class="main">
+          <div class="home__container bd-grid">
+            <div class="home__img">
+              <video autoplay muted loop width="100%">
+                <source src="Comp 1_4.mp4" />
+              </video>
+              <img src="images/Group 40Itreation1Group.png" alt="">
+            </div>
+  
+            <div class="home__data">
+              <h1 class="home__title">
+                <span class="home__title__1">Be</span><br />
+                <span class="home__title__2">Fearlessly</span><br />
+                <span class="home__title__3">Authentic</span>
+              </h1>
+              <p class="home__description">
+                Connecting like minded students across <span class="campuses">Campuses</span> 
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="images">
+        <div class="row">
+          <div class="odd element" data-aos="fade-down"><img src="images/Rectangle 19.png" alt="" /></div>
+          <div class="even element" data-aos="fade-up"><img src="images/Rectangle 20.png" alt="" /></div>
+          <div class="odd element" data-aos="fade-down"><img src="images/Rectangle 21.png" alt="" /></div>
+          <div class="even element" data-aos="fade-up"><img src="images/Rectangle 22.png" alt="" /></div>
+          <div class="odd element" data-aos="fade-down"><img src="images/Rectangle 23.png" alt="" /></div>
+          <div class="even element" data-aos="fade-up"><img src="images/Rectangle 24.png" alt="" /></div>
+          <div class="odd element" data-aos="fade-down"><img src="images/Rectangle 25.png" alt="" /></div>
+        </div>
+      </div>
+
+
+      <section class="home" id="home" data-aos="zoom-in-up">
+        <div class="home__container bd-grid about">
+          <div class="home__img__2">
+            <img src="images/philosophy.png" alt="">
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title__sub">
+              <span class="home__title__4">What is UpForCoffee?</span><br />
+            </h1>
+            <p class="home__description__content__1">
+              UpForCoffee is a platform exclusively for students,
+               where they can find their vibe and
+                meet people at university who like what you like.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="home" id="home" data-aos="zoom-in-down">
+        <div class="home__container bd-grid about">
+          <div class="home__img__1">
+            <img class="big__img" src="images/Frame 43.png" alt="">
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title__sub">
+              <span class="home__title__4">Your <span class="key">Privacy</span> is <br> safe with us</span><br />
+            </h1>
+            <p class="home__description__content__2">
+              Every profile you see is of someone from your own university campus.
+               UpForCoffee is a safe space to explore your interests & meet them #forcoffee!
+               <br>
+                 <span class="note">You choose who can see your profile.</span> 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="home" id="home" data-aos="zoom-in-up">
+        <div class="home__container bd-grid about">
+          <div class="home__img__2">
+            <img src="images/UpForCoffee (1) 1.png" alt="">
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title__sub">
+              <span class="home__title__4">Your <span class="key">Story</span> Matters</span><br />
+            </h1>
+            <p class="home__description__content__1">
+              At UpForCoffee, we belive true connections are built over stories and coffee conversations .
+              We believe that stories make life more interesting and meaningful. 
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="home" id="home" data-aos="zoom-in-down">
+        <div class="home__container bd-grid about">
+          
+          <div class="home__img__1">
+            <img src="images/UpForCoffee (2) 1.png" alt="">
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title__sub">
+              <span class="home__title__4">Meet <span class="key">Real</span> People</span><br />
+            </h1>
+            <p class="home__description__content__2">
+              Imagine a platform that's all about connecting with
+               people who share your interests, hobbies, and passions.
+                We're not another dating app - we're a platform for
+                 fostering true relationships.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="container" id="contact">
+        <div class="contact-box" id="contact-box" data-aos="zoom-in-up">
+          <div class="left">
+            <h2>Sounds interesting, <br> right? </h2>
+            <p>Always belive that something wonderful is about to happen.
+              Join us for  better on-campus connections!</p>
+          </div>
+          <div class="right">
+            <form id="joinUsForm" method="POST">
+            <input id="name" name="name" type="text" class="field" placeholder="Your Name" required>
+            <input id="college_name" name="college_name" type="text" class="field" placeholder="College Name" required>
+            <input id="email" name="email" type="email"  class="field" placeholder="Your Email" required>
+            <button type="submit" onclick=after(); id="submit" class="btn">Pre-register now</button>
+            <p class="thankyou" id="thankyou"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- ===== GSAP ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <!-- ====== BOOTSTRAP JAVASCRIPT ====== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function after(){
+          document.getElementById('submit')
+          document.getElementById('thankyou')
+          .innerHTML="Thank You for Joining Us!!";
+      }
+   </script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="javascript/app.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  </body>
 </html>
