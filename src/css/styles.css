@@ -1,0 +1,708 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600&family=Yeseva+One&display=swap");
+/*===== VARIABLES CSS =====*/
+/* :root {
+  --header-height: 3rem; */
+
+/*===== Colors =====*/
+/* --white: #ffffff;
+  --black: #000;
+  --niagara: #049c9c;
+  --fun-green: #048434;
+  --saffron-mango: #fcbc5c;
+  --coral-red: #ff4440;
+  --dodger-blue: #5474fc;
+  --electric-violet: #5c14ec; */
+
+/*===== Font and typography =====*/
+/* --body-font: "Reem Kufi", sans-serif;
+  --big-font-size: 2.5rem;
+  --bigger-font-size: 3rem;
+  --normal-font-size: 0.938rem; */
+
+/*===== z index =====*/
+/* --z-fixed: 100;
+}
+
+@media screen and (min-width: 770px) {
+  :root {
+    --big-font-size: 5rem;
+    --normal-font-size: 1rem;
+  }
+} */
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  padding: 0;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .home__img img {
+  width: 500px;
+} */
+
+.home__img__1 img {
+  width: 500px;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 100%;
+  column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.home__container .bd-grid .header {
+  height: 80vh;
+}
+
+.key {
+  border: 2px dashed #5c14ec;
+  border-top-left-radius: 15rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 16rem;
+}
+
+/*===== NAV =====*/
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.home__description__content__1 {
+  font-family: "Reem Kufi", sans-serif;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.home__description__content__2 {
+  font-family: "Reem Kufi", sans-serif;
+  line-height: 2;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    padding: 3.5rem 1.5rem 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+  }
+
+  .home__img img {
+    display: none;
+  }
+
+  .home__title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .home__title__sub {
+    text-align: center;
+  }
+
+  .home__description {
+    text-align: center;
+  }
+
+  .home__description__content__1,
+  .home__description__content__2 {
+    line-height: 2;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .home__container.bd-grid {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__container.bd-grid {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__close,
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.nav__logo,
+.nav__toggle {
+  font-size: 1.5rem;
+}
+
+.thankyou {
+  padding-top: 1rem;
+  color: #00c700;
+}
+
+.nav__link.join__us {
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border-radius: 1.1rem;
+}
+
+.nav__link:hover {
+  color: #5c14ec;
+}
+
+.nav__link.join__us:hover {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*=== Show menu ===*/
+.show {
+  right: 0;
+}
+
+/*===== HOME =====*/
+
+.home {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.home__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home__img {
+  position: relative;
+  justify-self: center;
+  width: 300px;
+  height: auto;
+}
+
+.home__img__2 {
+  position: relative;
+  justify-self: center;
+  width: 300px;
+  height: auto;
+}
+
+/* .home__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}  */
+
+.home__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #000;
+  font-family: "Yeseva One", cursive;
+}
+
+/* .home__title {
+  font-size: 5rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+} */
+
+.home__title__sub {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.home__title__1 {
+  font-size: 0.8em;
+}
+
+.home__title__2 {
+  font-size: 0.9em;
+}
+
+.home__title__3 {
+  font-size: 1em;
+}
+
+.home__description {
+  font-size: 1.4em;
+
+  margin-bottom: 2.5rem;
+  font-family: "Reem Kufi", sans-serif;
+}
+
+.home__button {
+  display: inline-block;
+  background-color: #5c14ce;
+  color: #fff;
+  padding: 1.125rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.home__button:hover {
+  background-color: #5c14ce;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  min-width: none !important;
+  max-width: none !important;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.images {
+  margin-bottom: 10rem;
+}
+
+div .element img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div .odd img {
+  animation: UptoBottom 1s ease-in-out;
+}
+
+.philosophy {
+  margin: 3rem auto;
+}
+
+.note {
+  margin-top: 12rem;
+  font-weight: bold;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("../images/Group 62.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    background-color: #fff;
+  }
+}
+
+.contact-box {
+  max-width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 2rem 5px rgba(0, 0, 0, 0.19);
+  border-radius: 2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("img/bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+.left h2 {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.5em;
+  padding: 1.5rem;
+}
+
+.left p {
+  font-size: 1.3rem;
+  padding: 1rem 3rem 0 3rem;
+  text-align: left;
+}
+
+.right {
+  margin-top: 3rem;
+  padding: 0 40px;
+}
+
+h2 {
+  position: relative;
+  padding: 0 0 10px;
+}
+
+h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  border-radius: 1rem;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.campuses {
+  color: #5c14ce;
+  font-weight: bold;
+}
+
+.Thanks {
+  display: none;
+}
+
+.field:focus {
+  border: 2px solid rgba(30, 85, 250, 0.47);
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+@media screen and (max-width: 880px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 200px;
+  }
+}
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 900px) {
+  .contact-box {
+    max-width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 2rem 5px rgba(0, 0, 0, 0.19);
+    border-radius: 3rem;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .nav {
+    height: calc(3rem + 1.5rem);
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-left: 3rem;
+    margin-bottom: 0;
+  }
+
+  .about {
+    margin-bottom: 15rem;
+  }
+
+  .big__img {
+    width: 200px;
+    height: auto;
+  }
+
+  .home__container {
+    row-gap: 0;
+    align-items: center;
+  }
+
+  .home__container .home__container .header {
+    height: 100vh;
+  }
+
+  .home__container .bd-grid {
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+  }
+
+  .home__img {
+    order: 1;
+    width: 500px;
+    margin-top: 3rem;
+  }
+
+  .home__img__2 {
+    order: 1;
+    width: 500px;
+    margin-top: 3rem;
+  }
+
+  .home__img img {
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+
+  .home__img video {
+    display: none;
+  }
+
+  .home__title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home__title__1 {
+    font-size: 0.6em;
+  }
+
+  .home__title__2 {
+    font-size: 0.8em;
+  }
+
+  .home__title__3 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__title {
+    font-size: 7rem;
+    margin-top: 7rem;
+  }
+
+  .home__title__1 {
+    font-size: 0.6em;
+  }
+
+  .home__title__2 {
+    font-size: 0.8em;
+  }
+
+  .home__title__3 {
+    font-size: 1em;
+  }
+
+  .home__img {
+    width: 604px;
+    height: 466px;
+  }
+
+  .home__img__1 img {
+    width: 604px;
+  }
+
+  .home__img__1 {
+    width: 604px;
+    height: 466px;
+  }
+
+  .home__description {
+    font-size: 1.5rem;
+  }
+
+  .home__description__content__1,
+  .home__description__content__2 {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: left;
+    width: 100%;
+  }
+
+  .home__title__sub {
+    text-align: left;
+  }
+
+  .home__img video {
+    display: none;
+  }
+}
